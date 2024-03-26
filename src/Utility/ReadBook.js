@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+
 const getBookData = () => {
   let bookData = [];
   const storedBookData = localStorage.getItem("book-data");
@@ -9,33 +10,40 @@ const getBookData = () => {
 };
 
 const getWishList = () => {
-  const wishList = localStorage.getItem("wish-list");
-  if (wishList) {
-    return JSON.parse(wishList);
+  let wishList = [];
+  const storedWishList = localStorage.getItem("wish-list");
+  if (storedWishList) {
+    wishList = JSON.parse(storedWishList);
   }
-  return [];
+  return wishList;
 };
 
-const saveBookData = (e) => {
+const saveBookData = (book) => {
   let bookData = getBookData();
-  const exists = bookData.find((data) => data.bookId == e.bookId);
+  const exists = bookData.find((data) => data.bookId === book.bookId);
   if (exists) {
-    return toast.error("acey");
+    return toast.error("Book already available");
   }
-  bookData.push(e);
+  bookData.push(book);
   localStorage.setItem("book-data", JSON.stringify(bookData));
-  toast.success("available");
+  toast.success("Book saved successfully");
 };
-const saveWishList = (e) => {
-  const wishList = getWishList();
-  const exists = wishList.find((wish) => wish.bookId == e.bookId);
-  if (exists) {
-    return toast.error("collected");
-  }
 
-  wishList.push(e);
-  localStorage.setItem("wish-list", JSON.stringify(wishList));
-  toast.success("congress");
+const saveWishList = (book) => {
+  const saveData = getBookData();
+  const wishList = getWishList();
+  const existsReadBooks = saveData.find((read) => read.bookId === book.bookId);
+  if (existsReadBooks) {
+    return toast.error('Book already added to read books');
+  }
+  const existsWishList = wishList.find((wish) => wish.bookId === book.bookId);
+  if (!existsWishList) {
+    wishList.push(book);
+    localStorage.setItem("wish-list", JSON.stringify(wishList));
+    toast.success("Book added to wishlist");
+  } else {
+    return toast.error("Book already in wishlist");
+  }
 };
 
 export { getBookData, saveBookData };
