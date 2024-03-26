@@ -1,11 +1,15 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaAngleDown } from "react-icons/fa";
-import ReadBooks from "../../Components/ReadBooks/ReadBooks";
-import { useLoaderData, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import BookRead from "../../Components/BookRead/BookRead";
+import { useEffect, useState } from "react";
+import { getBookData } from "../../Utility/ReadBook";
 const ListedBooks = () => {
-   
+  const [bookList, setBookList] = useState([]);
+  useEffect(() => {
+    const listedBookRead = getBookData();
+    setBookList(listedBookRead);
+  }, [])
   return (
     <div>
       <div className="text-center space-y-8">
@@ -19,12 +23,12 @@ const ListedBooks = () => {
       <div>
         <Tabs>
           <TabList className="text-[#131313CC] text-xl font-semibold">
-            <Tab>Read Books</Tab>
+            <Tab>Read Books: {}</Tab>
             <Tab>Wishlist Books</Tab>
           </TabList>
 
           <TabPanel>
-            <ReadBooks></ReadBooks>
+            <BookRead bookList={bookList}></BookRead>
           </TabPanel>
           <TabPanel>
             <h2>Any content 2</h2>

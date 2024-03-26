@@ -6,7 +6,7 @@ const BooksCard = ({ book }) => {
     <div>
       
       <div className="card shadow-xl rounded-xl border lg:my-8">
-      <Link to={`/book/${bookId}`}>
+      <Link to={`/books/${bookId}`}>
       <figure className="m-6 rounded-lg bg-[#F3F3F3]">
         <img className="p-3 h-[300px]" src={image} alt="Shoes" />
       </figure>
