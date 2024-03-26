@@ -12,7 +12,7 @@ const ListedBooks = () => {
   }, [])
   return (
     <div>
-      <div className="text-center space-y-8">
+      <div className="text-center space-y-4 lg:space-y-8 mb-8 lg:mb-16">
         <h2 className="bg-base-200 text-5xl font-bold py-6 rounded-xl">
           Books{" "}
         </h2>
