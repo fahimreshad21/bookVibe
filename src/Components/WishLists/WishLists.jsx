@@ -1,6 +1,7 @@
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { MdInsertPageBreak } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const WishLists = ({wish}) => {
     const {bookId, image, bookName, author, tags, yearOfPublishing, totalPages, publisher, rating, category} = wish;
