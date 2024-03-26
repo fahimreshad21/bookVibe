@@ -1,9 +1,9 @@
-import React from 'react';
-import { CiLocationOn } from 'react-icons/ci';
-import { MdInsertPageBreak } from 'react-icons/md';
-import { AiOutlineUsergroupAdd } from 'react-icons/ai';
-const ReadBook = ({book}) => {
-    const {image, bookName, author, tags, yearOfPublishing, totalPages, publisher, rating, category} = book
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
+import { MdInsertPageBreak } from "react-icons/md";
+
+const WishLists = ({wish}) => {
+    const {image, bookName, author, tags, yearOfPublishing, totalPages, publisher, rating, category} = wish;
     return (
         <div className="flex flex-col lg:flex-row bg-base-100 shadow-xl mt-4 lg:mt-10 border-2 h-full lg:w-4/5 mx-auto rounded-lg">
       <figure className="m-6 rounded-lg h-full bg-[#F3F3F3]">
@@ -16,7 +16,7 @@ const ReadBook = ({book}) => {
             <div className='flex items-center gap-4'>
             <p className="text-xl lg:text-2xl font-bold">Tag:</p>
             {
-                tags.map((tag, ind)=> <p key={ind} className="text-[#23BE0A] bg-[#F3F3F3] rounded-3xl font-medium lg:text-2xl p-2 flex items-center justify-center"># <span>{tag}</span></p>)
+                tags.map(tag=> <p className="text-[#23BE0A] bg-[#F3F3F3] rounded-3xl font-medium lg:text-2xl p-2 flex items-center justify-center"># <span>{tag}</span></p>)
                 
             }
             </div>
@@ -40,4 +40,4 @@ const ReadBook = ({book}) => {
     );
 };
 
-export default ReadBook;
+export default WishLists;

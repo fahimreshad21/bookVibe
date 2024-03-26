@@ -3,13 +3,20 @@ import "react-tabs/style/react-tabs.css";
 import { FaAngleDown } from "react-icons/fa";
 import BookRead from "../../Components/BookRead/BookRead";
 import { useEffect, useState } from "react";
-import { getBookData } from "../../Utility/ReadBook";
+import { getBookData, getWishList } from "../../Utility/ReadBook";
+import WishLists from "../../Components/WishLists/WishLists";
 const ListedBooks = () => {
   const [bookList, setBookList] = useState([]);
+  const [wishList, setWishList] = useState([]);
   useEffect(() => {
     const listedBookRead = getBookData();
     setBookList(listedBookRead);
   }, [])
+  useEffect(() => {
+    const wishList = getWishList();
+    setWishList(wishList);
+  }, [])
+
   return (
     <div>
       <div className="text-center space-y-4 lg:space-y-8 mb-8 lg:mb-16">
@@ -23,7 +30,7 @@ const ListedBooks = () => {
       <div>
         <Tabs>
           <TabList className="text-[#131313CC] text-xl font-semibold">
-            <Tab>Read Books: {}</Tab>
+            <Tab>Read Books</Tab>
             <Tab>Wishlist Books</Tab>
           </TabList>
 
@@ -31,7 +38,9 @@ const ListedBooks = () => {
             <BookRead bookList={bookList}></BookRead>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            {
+              wishList.map((wish, ind)=> <WishLists key={ind} wish={wish}></WishLists>)
+            }
           </TabPanel>
         </Tabs>
       </div>

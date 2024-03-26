@@ -1,8 +1,6 @@
 import { CiLocationOn } from "react-icons/ci";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { AiOutlineUsergroupAdd } from "react-icons/ai";
-import { MdInsertPageBreak } from "react-icons/md";
-import { saveBookData } from "../../Utility/ReadBook";
+import { saveBookData, saveWishList } from "../../Utility/ReadBook";
 const ReadBooks = () => {
     const readBooksData = useLoaderData();
     const {id} = useParams();
@@ -10,6 +8,9 @@ const ReadBooks = () => {
     const bookData = readBooksData.find(data => data.bookId === intId);
     const handleReadBook = (bookId) => {
       saveBookData(bookId)
+    }
+    const handleWishList = (bookId) => {
+      saveWishList(bookId)
     }
     
   return (
@@ -28,7 +29,7 @@ const ReadBooks = () => {
         <div className="flex items-center justify-start w-2/5 gap-6 text-center">
             <p className="text-2xl font-bold">Tag:</p>
             {
-                bookData.tags.map(tag=> <p className="text-[#23BE0A] bg-[#F3F3F3] rounded-3xl font-medium text-xl p-2 flex items-center justify-center"># <span>{tag}</span></p>)
+                bookData.tags.map((tag, ind)=> <p key={ind} className="text-[#23BE0A] bg-[#F3F3F3] rounded-3xl font-medium text-xl p-2 flex items-center justify-center"># <span>{tag}</span></p>)
                 
             }
             {/* <p className="flex items-center gap-2 font-medium text-xl text-[#131313CC]"><CiLocationOn className="text-3xl"></CiLocationOn> Year of Publishing: <span>{bookData.yearOfPublishing}</span></p> */}
@@ -52,8 +53,8 @@ const ReadBooks = () => {
         <Link to="/book">
         <button onClick={() => handleReadBook(bookData)} className="btn bg-white hover:bg-[#23BE0A] w-32 h-14 text-xl font-bold mr-4">Read</button>
         </Link>
-        <Link>
-        <button className="btn bg-[#59C6D2] w-32 h-14 text-xl font-bold text-white">Wishlist</button>
+        <Link to="/book">
+        <button onClick={() => handleWishList(bookData)} className="btn bg-[#59C6D2] w-32 h-14 text-xl font-bold text-white">Wishlist</button>
         </Link>
         </div>
       </div>

@@ -6,7 +6,7 @@ const BookRead = ({bookList}) => {
     return(
         <div>
             {
-        bookList.map(book=> <ReadBook book={book}></ReadBook>)
+        bookList.map((book, ind)=> <ReadBook key={ind} book={book}></ReadBook>)
     }
         </div>
     )
