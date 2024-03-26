@@ -3,7 +3,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdInsertPageBreak } from "react-icons/md";
 
 const WishLists = ({wish}) => {
-    const {image, bookName, author, tags, yearOfPublishing, totalPages, publisher, rating, category} = wish;
+    const {bookId, image, bookName, author, tags, yearOfPublishing, totalPages, publisher, rating, category} = wish;
     return (
         <div className="flex flex-col lg:flex-row bg-base-100 shadow-xl mt-4 lg:mt-10 border-2 h-full lg:w-4/5 mx-auto rounded-lg">
       <figure className="m-6 rounded-lg h-full bg-[#F3F3F3]">
@@ -31,7 +31,7 @@ const WishLists = ({wish}) => {
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:w-2/3 text-center">
             <p className="bg-[#328EFF26] text-[#328EFF] text-2xl font-semibold p-3 rounded-3xl w-full lg:w-auto">Category: {category}</p>
             <p className="bg-[#FFAC3326] text-[#FFAC33] text-2xl font-semibold p-3 rounded-3xl w-full lg:w-auto">Rating: {rating}</p>
-            <button className="btn bg-[#23BE0A] text-white text-2xl lg:font-semibold rounded-3xl  w-full lg:w-auto">View Details</button>
+            <Link to={`/books/${bookId}`}><button className="btn bg-[#23BE0A] text-white text-2xl lg:font-semibold rounded-3xl  w-full lg:w-auto">View Details</button></Link>
         </div>
         
       </div>

@@ -1,4 +1,4 @@
-import { CiLocationOn } from "react-icons/ci";
+
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { saveBookData, saveWishList } from "../../Utility/ReadBook";
 const ReadBooks = () => {
@@ -31,20 +31,9 @@ const ReadBooks = () => {
             {
                 bookData.tags.map((tag, ind)=> <p key={ind} className="text-[#23BE0A] bg-[#F3F3F3] rounded-3xl font-medium text-xl p-2 flex items-center justify-center"># <span>{tag}</span></p>)
                 
-            }
-            {/* <p className="flex items-center gap-2 font-medium text-xl text-[#131313CC]"><CiLocationOn className="text-3xl"></CiLocationOn> Year of Publishing: <span>{bookData.yearOfPublishing}</span></p> */}
-        </div>
-        {/* <div className="flex items-center text-[#131313CC] text-xl font-semibold w-1/3">
-            <p className="flex items-center gap-2 text-xl font-medium"><AiOutlineUsergroupAdd className="text-3xl"></AiOutlineUsergroupAdd> Publishers: {bookData.publisher}</p>
-            <p className="flex items-center gap-2 text-xl font-medium"><MdInsertPageBreak className="text-3xl"></MdInsertPageBreak> Page: {bookData.totalPages}</p>
-            <p className="flex justify-end items-center gap-2"></p>
-        </div> */}
+            }            
+        </div>     
         <hr />
-        {/* <div className="flex items-center gap-4 w-1/3 text-center">
-            <p className="bg-[#328EFF26] text-[#328EFF] text-xl font-semibold p-3 rounded-3xl">Category: </p>
-            <p className="bg-[#FFAC3326] text-[#FFAC33] text-xl font-semibold p-3 rounded-3xl">Rating: </p>
-            <button className="btn bg-[#23BE0A] text-white text-xl lg:font-semibold rounded-3xl ">View Details</button>
-        </div> */}
         <p className="text-xl font-semibold text-[#131313CC] max-h-20 flex gap-10">Number of Pages: <span className="font-bold">{bookData.totalPages}</span></p>
         <p className="text-xl font-semibold text-[#131313CC] max-h-20 flex gap-28">Publisher: <span className="font-bold">{bookData.publisher}</span></p>
         <p className="text-xl font-semibold text-[#131313CC] max-h-20 flex gap-10">Year of Publishing: <span className="font-bold">{bookData.yearOfPublishing}</span></p>

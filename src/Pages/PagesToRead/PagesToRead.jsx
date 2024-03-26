@@ -1,7 +1,9 @@
+import PageRead from "../../Components/PageRead/PageRead";
+
 const PagesToRead = () => {
     return (
         <div>
-            <h2>pages.........</h2>
+            <PageRead></PageRead>
         </div>
     );
 };

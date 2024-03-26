@@ -1,35 +1,42 @@
+import { toast } from "react-toastify";
 const getBookData = () => {
-    const bookData = localStorage.getItem('book-data');
-    if(bookData){
-        return JSON.parse(bookData);
-    }
-    return [];
-}
+  let bookData = [];
+  const storedBookData = localStorage.getItem("book-data");
+  if (storedBookData) {
+    bookData = JSON.parse(storedBookData);
+  }
+  return bookData;
+};
 
 const getWishList = () => {
-    const wishList = localStorage.getItem('wish-list');
-    if(wishList){
-        return JSON.parse(wishList);
-    }
-    return [];
-}
+  const wishList = localStorage.getItem("wish-list");
+  if (wishList) {
+    return JSON.parse(wishList);
+  }
+  return [];
+};
 
-const saveBookData = e => {
-    const bookData = getBookData();
-    const exists = bookData.find(data => data === e);
-    if(!exists){
-        bookData.push(e);
-        localStorage.setItem('book-data', JSON.stringify(bookData))
-    }
-}
-const saveWishList = e => {
-    const wishList = getWishList();
-    const exists = wishList.find(data => data === e);
-    if(!exists){
-        wishList.push(e);
-        localStorage.setItem('wish-list', JSON.stringify(wishList))
-    }
-}
+const saveBookData = (e) => {
+  let bookData = getBookData();
+  const exists = bookData.find((data) => data.bookId == e.bookId);
+  if (exists) {
+    return toast.error("acey");
+  }
+  bookData.push(e);
+  localStorage.setItem("book-data", JSON.stringify(bookData));
+  toast.success("available");
+};
+const saveWishList = (e) => {
+  const wishList = getWishList();
+  const exists = wishList.find((wish) => wish.bookId == e.bookId);
+  if (exists) {
+    return toast.error("collected");
+  }
 
-export {getBookData, saveBookData}
-export {getWishList, saveWishList}
+  wishList.push(e);
+  localStorage.setItem("wish-list", JSON.stringify(wishList));
+  toast.success("congress");
+};
+
+export { getBookData, saveBookData };
+export { getWishList, saveWishList };
