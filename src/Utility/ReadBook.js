@@ -34,7 +34,7 @@ const saveWishList = (book) => {
   const wishList = getWishList();
   const existsReadBooks = saveData.find((read) => read.bookId === book.bookId);
   if (existsReadBooks) {
-    return toast.error('Book already added to read books');
+    return toast.error("Book already added to read books");
   }
   const existsWishList = wishList.find((wish) => wish.bookId === book.bookId);
   if (!existsWishList) {

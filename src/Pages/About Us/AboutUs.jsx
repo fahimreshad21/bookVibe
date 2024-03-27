@@ -2,7 +2,6 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const AboutUs = () => {
-  const aboutUs = useLoaderData();
   return (
     <div className="">
       <h1 className="text-center text-4xl font-semibold mt-10">
