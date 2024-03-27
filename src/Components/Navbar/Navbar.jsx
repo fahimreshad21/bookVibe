@@ -23,14 +23,14 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="text-center space-y-2 font-bold 2 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="space-y-2 font-bold 2 dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52 text-xl"
           >
             <li>
               <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
                   isActive
-                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    ? "text-green-600 font-bold rounded-lg"
                     : isPending
                     ? "pending"
                     : ""
@@ -39,12 +39,13 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
+            <hr />
             <li>
               <NavLink
                 to="/book"
                 className={({ isActive, isPending }) =>
                   isActive
-                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    ? "text-green-600 font-bold rounded-lg"
                     : isPending
                     ? "pending"
                     : ""
@@ -53,12 +54,13 @@ const Navbar = () => {
                 Listed Books
               </NavLink>
             </li>
+            <hr />
             <li>
               <NavLink
                 to="/read"
                 className={({ isActive, isPending }) =>
                   isActive
-                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    ? "text-green-600 font-bold rounded-lg"
                     : isPending
                     ? "pending"
                     : ""
@@ -67,11 +69,15 @@ const Navbar = () => {
                 Pages to Read
               </NavLink>
             </li>
+            <hr />
             <li>
-              <a className="w-2/3 btn bg-[#23BE0A] text-white">Sign In</a>
+              <a className="w-full btn bg-[#23BE0A] text-white">Sign In</a>
             </li>
+            <hr />
             <li>
-              <a className="w-2/3 btn bg-[#59C6D2] text-white -mt-1">Sign Up</a>
+              <a className="w-full btn bg-[#59C6D2] text-white -mt-1">
+                Sign Up
+              </a>
             </li>
           </ul>
         </div>
