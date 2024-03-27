@@ -69,6 +69,34 @@ const Navbar = () => {
                 Pages to Read
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/reviews"
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "text-green-600 font-bold rounded-lg"
+                    : isPending
+                    ? "pending"
+                    : ""
+                }
+              >
+                Reviews
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "text-green-600 font-bold rounded-lg"
+                    : isPending
+                    ? "pending"
+                    : ""
+                }
+              >
+                About
+              </NavLink>
+            </li>
             <hr />
             <li>
               <a className="w-full btn bg-[#23BE0A] text-white">Sign In</a>
@@ -127,6 +155,34 @@ const Navbar = () => {
               }
             >
               Pages to Read
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/reviews"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              Reviews
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              About
             </NavLink>
           </li>
         </ul>

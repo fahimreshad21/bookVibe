@@ -10,7 +10,10 @@
         "category": "Thriller",
         "tags": ["Suspense", "Psychological"],
         "publisher": "Celadon Books",
-        "yearOfPublishing": 2019
+        "yearOfPublishing": 2019, 
+        "reviews": "In Alex Michaelides' 'The Silent Patient,' readers are plunged into a world of psychological intrigue and suspense. The narrative unfolds with meticulous precision, as the enigmatic protagonist, Alicia Berenson, holds the key to a dark and twisted mystery. Michaelides masterfully weaves together a tale of deception, obsession, and the complexities of the human psyche.",
+        "reviewerName": "Sophia Johnson", 
+        "reviewsTime": 1
     },
     {
         "bookId": 2,
@@ -23,7 +26,10 @@
         "category": "Memoir",
         "tags": ["Autobiography", "Education"],
         "publisher": "Random House",
-        "yearOfPublishing": 2018
+        "yearOfPublishing": 2018,
+        "reviews": "Tara Westover's 'Educated: A Memoir' is a breathtaking journey of resilience, courage, and the pursuit of knowledge. From her upbringing in a strict, isolated household in rural Idaho to her eventual transformation into a scholar at Cambridge University, Westover's story is both harrowing and inspiring.",
+        "reviewerName": "Oliver Davis", 
+        "reviewsTime": 2
     },
     {
         "bookId": 3,
@@ -36,7 +42,10 @@
         "category": "Non-fiction",
         "tags": ["History", "Anthropology"],
         "publisher": "Harper",
-        "yearOfPublishing": 2014
+        "yearOfPublishing": 2014,
+        "reviews": "In 'Sapiens: A Brief History of Humankind,' Yuval Noah Harari offers readers a sweeping narrative of human history that challenges conventional wisdom and invites reflection on our collective past. Through his insightful analysis, Harari explores the forces that have shaped our species, from the Cognitive Revolution to the present day.",
+        "reviewerName": "Emma Wilson", 
+        "reviewsTime": 1
     },
     {
         "bookId": 4,
@@ -49,7 +58,10 @@
         "category": "Fantasy",
         "tags": ["Magic", "Romance"],
         "publisher": "Doubleday",
-        "yearOfPublishing": 2011
+        "yearOfPublishing": 2011,
+        "reviews": "Erin Morgenstern's 'The Night Circus' is a mesmerizing blend of fantasy and romance that transports readers to a world of magic and wonder. Within the confines of a mysterious circus, a love story unfolds amidst the backdrop of a competition between two young magicians.",
+        "reviewerName": "William Brown", 
+        "reviewsTime": 2
     },
     {
         "bookId": 5,
@@ -62,7 +74,10 @@
         "category": "Self-help",
         "tags": ["Personal Development", "Philosophy"],
         "publisher": "HarperOne",
-        "yearOfPublishing": 2016
+        "yearOfPublishing": 2016,
+        "reviews": "Mark Manson's 'The Subtle Art of Not Giving a F*ck' is a refreshing antidote to the positivity culture that permeates self-help literature. With blunt honesty and irreverent humor, Manson challenges readers to embrace life's inherent struggles and prioritize what truly matters.",
+        "reviewerName": "Sophie Anderson", 
+        "reviewsTime": 4
     },
     {
         "bookId": 6,
@@ -75,7 +90,11 @@
         "category": "Memoir",
         "tags": ["Autobiography", "Inspiration"],
         "publisher": "Crown Publishing Group",
-        "yearOfPublishing": 2018
+        "yearOfPublishing": 2018,
+        "reviews": "Michelle Obama's 'Becoming' is a deeply personal and inspiring memoir that chronicles her journey from a working-class neighborhood in Chicago to the White House. With honesty and grace, Obama reflects on her experiences as a daughter, wife, mother, and public figure, offering insights into the challenges and triumphs that have shaped her life. 'Becoming' is a testament to resilience, hope, and the power of authenticity." ,
+        "reviewerName": "Emily Thompson", 
+        "reviewsTime": 1
+        
     },
     {
         "bookId": 7,
@@ -88,7 +107,10 @@
         "category": "Fiction",
         "tags": ["Philosophical", "Adventure"],
         "publisher": "HarperCollins",
-        "yearOfPublishing": 1988
+        "yearOfPublishing": 1988,
+        "reviews": "Paulo Coelho's 'The Alchemist' is a timeless tale of self-discovery, destiny, and the pursuit of one's dreams. Through the journey of Santiago, a young shepherd, readers are reminded of life's profound truths and the importance of pursuing one's dreams with courage and determination.",
+        "reviewerName": "Davis Emil",
+        "reviewsTime": 2
     },
     {
         "bookId": 8,
@@ -101,7 +123,10 @@
         "category": "Science Fiction",
         "tags": ["Space Exploration", "Survival"],
         "publisher": "Crown Publishing Group",
-        "yearOfPublishing": 2014
+        "yearOfPublishing": 2014, 
+        "reviews": "Andy Weir's 'The Martian' is an exhilarating science fiction adventure that captivates readers from start to finish. As astronaut Mark Watney fights for survival on the hostile terrain of Mars, Weir masterfully blends suspense, humor, and ingenuity. The result is a gripping tale of human resilience that leaves readers breathless with anticipation." ,
+        "reviewerName": "Emily Thompson",
+        "reviewsTime": 3
     },
     {
         "bookId": 9,
@@ -114,6 +139,9 @@
         "category": "Mystery",
         "tags": ["Crime", "Suspense"],
         "publisher": "Norstedts Förlag",
-        "yearOfPublishing": 2005
+        "yearOfPublishing": 2005,
+        "reviews": "Stieg Larsson's 'The Girl with the Dragon Tattoo' is a gripping mystery thriller that keeps readers on the edge of their seats until the final page. With its intricate plot, complex characters, and relentless suspense, the novel is a masterclass in storytelling. Larsson's meticulous attention to detail and skillful pacing make for a truly unforgettable reading experience.",
+        "reviewerName": "Jacob Smith", 
+        "reviewsTime": 6
     }
 ]

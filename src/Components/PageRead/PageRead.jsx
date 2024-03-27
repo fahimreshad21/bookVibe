@@ -10,7 +10,6 @@ const PageRead = () => {
     const allData = getBookData();
     setReadBooks(allData);
   }, []);
-  console.log(readBooks);
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
   const getPath = (x, y, width, height) => {
