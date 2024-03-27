@@ -10,6 +10,7 @@ import PagesToRead from "./Pages/PagesToRead/PagesToRead";
 import ReadBooks from "./Components/ReadBooks/ReadBooks";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import WishLists from "./Components/WishLists/WishLists";
 
 const router = createBrowserRouter([
   {

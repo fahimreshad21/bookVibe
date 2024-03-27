@@ -23,37 +23,105 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="text-center space-y-2 font-bold 2 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    : isPending
+                    ? "pending"
+                    : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/book">Listed Books</NavLink>
+              <NavLink
+                to="/book"
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    : isPending
+                    ? "pending"
+                    : ""
+                }
+              >
+                Listed Books
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/read">Pages to Read</NavLink>
+              <NavLink
+                to="/read"
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                    : isPending
+                    ? "pending"
+                    : ""
+                }
+              >
+                Pages to Read
+              </NavLink>
             </li>
             <li>
               <a className="w-2/3 btn bg-[#23BE0A] text-white">Sign In</a>
             </li>
             <li>
-              <a className="w-2/3 btn bg-[#59C6D2] text-white mt-2">Sign Up</a>
+              <a className="w-2/3 btn bg-[#59C6D2] text-white -mt-1">Sign Up</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
+        <NavLink to="/" className="btn btn-ghost text-3xl font-bold">
+          Book Vibe
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-xl text-[#131313CC] font-medium space-x-8">
+        <ul className="flex items-center px-1 text-xl font-medium space-x-8">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/book">Listed Books</NavLink>
+            <NavLink
+              to="/book"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              Listed Books
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/read">Pages to Read</NavLink>
+            <NavLink
+              to="/read"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "text-green-600 font-bold border px-4 py-2 border-green-500 rounded-lg"
+                  : isPending
+                  ? "pending"
+                  : ""
+              }
+            >
+              Pages to Read
+            </NavLink>
           </li>
         </ul>
       </div>

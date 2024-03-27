@@ -13,7 +13,7 @@ const Home = () => {
         <div className="lg:flex lg:min-h-[750px] bg-base-200 rounded-lg border py-4">
       <div className="flex flex-col lg:flex-row-reverse w-full justify-evenly items-center">
         <img
-          src="/src/assets/Images/banner.png"
+          src="https://i.ibb.co/d0wsyxk/banner.png"
           className="lg:max-w-md rounded-lg w-1/2 lg:w-full"
         />
         <div className="space-y-4 lg:space-y-16 text-center lg:text-start">
