@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getBookData } from "../../Utility/ReadBook";
 
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Cell } from "recharts";
-import { generatePath } from "react-router-dom";
 
 const PageRead = () => {
   const [readBooks, setReadBooks] = useState([]);
@@ -30,7 +29,7 @@ const PageRead = () => {
   };
 
   return (
-    <div className="w-full bg-base-200 flex items-center justify-center p-20 text-xl font-black">
+    <div className="w-full bg-base-200 flex items-center justify-center lg:p-20 text-xl font-black">
       <BarChart
         width={1800}
         height={600}
