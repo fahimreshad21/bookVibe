@@ -2,7 +2,7 @@ Website Name:
 Book Vibe 
 
 Live site url:
-https://book-vibe-by-fahimreshad.netlify.app/book
+https://book-vibe-by-fahimreshad.netlify.app/
 
 
 
