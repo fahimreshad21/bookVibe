@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getBookData } from "../../Utility/ReadBook";
-
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Cell } from "recharts";
 
 const PageRead = () => {
@@ -10,7 +9,6 @@ const PageRead = () => {
     setReadBooks(allData);
   }, []);
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
-
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
@@ -21,7 +19,6 @@ const PageRead = () => {
     }, ${y + height}
     Z`;
   };
-
   const TriangleBar = (props) => {
     const { fill, x, y, width, height } = props;
 
