@@ -1,5 +1,4 @@
 import { toast } from "react-toastify";
-
 const getBookData = () => {
   let bookData = [];
   const storedBookData = localStorage.getItem("book-data");
@@ -8,7 +7,6 @@ const getBookData = () => {
   }
   return bookData;
 };
-
 const getWishList = () => {
   let wishList = [];
   const storedWishList = localStorage.getItem("wish-list");
@@ -17,10 +15,9 @@ const getWishList = () => {
   }
   return wishList;
 };
-
 const saveBookData = (book) => {
   let bookData = getBookData();
-  const exists = bookData.find((data) => data.bookId === book.bookId);
+  const exists = bookData.find((data) => data?.bookId === book?.bookId);
   if (exists) {
     return toast.error("Book already available");
   }
@@ -28,11 +25,10 @@ const saveBookData = (book) => {
   localStorage.setItem("book-data", JSON.stringify(bookData));
   toast.success("Book saved successfully");
 };
-
 const saveWishList = (book) => {
   const saveData = getBookData();
   const wishList = getWishList();
-  const existsReadBooks = saveData.find((read) => read.bookId === book.bookId);
+  const existsReadBooks = saveData.find((read) => read?.bookId === book?.bookId);
   if (existsReadBooks) {
     return toast.error("Book already added to read books");
   }
@@ -45,6 +41,5 @@ const saveWishList = (book) => {
     return toast.error("Book already in wishlist");
   }
 };
-
 export { getBookData, saveBookData };
 export { getWishList, saveWishList };
