@@ -24,7 +24,6 @@ const PageRead = () => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
-
   return (
     <div className="w-full bg-base-200 flex items-center justify-center lg:p-20 text-xl font-black">
       <BarChart
